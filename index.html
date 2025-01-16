@@ -102,10 +102,9 @@
       <p class="abstract-text">
         <font color="000000"> Existing text-to-music generation models face two main limitations: they either only generate approximately 10 seconds of music, falling short of users' needs for longer compositions, or they require longer-duration datasets and increased output feature dimensions for training, leading to higher data and computational costs. 
           We systematically explored two training-free strategies for long-duration music generation based on diffusion models. 
-          Both methods divide the task into multiple stages, with stage outputs concatenated to form the complete composition. 
-The first, called the audio-prompt-guided strategy, employs the tail of audio features from the previous stage to serve as a prefix of the current stage, using masking techniques to guide the generation of the remainder of the current stage. 
-          The second, the structure-guided strategy, leverages the structure of previous audio representations as intermediate states in the current stage generation, initiating the inference sampling process from the intermediate time step. 
-          Our experiments demonstrate that existing short-form music generation systems are capable of generating long-duration music.</font>
+          Both methods divide the task into multiple stages, where each stage generates a segment of music. The outputs from each stage are then concatenated to form the complete composition. 
+          The first, called the audio-prompt-guided strategy, employs the tail of audio features from the previous stage to serve as a prefix of the current stage, using masking techniques to guide the generation of the remainder of the current stage. 
+          The second, the structure-guided strategy, leverages the structure of previous audio representations as intermediate states in the current stage generation, initiating the inference sampling process from the intermediate time step.</font>
       </p>
       <img src="together.png" alt="PDF Image" class="pdf-image">
     </section>
